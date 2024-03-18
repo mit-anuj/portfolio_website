@@ -8,8 +8,8 @@ import { toast } from 'react-toastify';
 
 function ContactForm() {
   const [input, setInput] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    form_email: '',
     message: '',
   });
   const [error, setError] = useState({
@@ -18,14 +18,14 @@ function ContactForm() {
   });
 
   const checkRequired = () => {
-    if (input.email && input.message && input.name) {
+    if (input.form_email && input.message && input.from_name) {
       setError({ ...error, required: false });
     }
   };
 
   const handleSendMail = async (e) => {
     e.preventDefault();
-    if (!input.email || !input.message || !input.name) {
+    if (!input.form_email || !input.message || !input.from_name) {
       setError({ ...error, required: true });
       return;
     } else if (error.email) {
@@ -44,7 +44,7 @@ function ContactForm() {
       if (res.status === 200) {
         toast.success('Message sent successfully!');
         setInput({
-          name: '',
+          from_name: '',
           email: '',
           message: '',
         });
@@ -71,9 +71,9 @@ function ContactForm() {
               type="text"
               maxLength="100"
               required={true}
-              onChange={(e) => setInput({ ...input, name: e.target.value })}
+              onChange={(e) => setInput({ ...input, from_name: e.target.value })}
               onBlur={checkRequired}
-              value={input.name}
+              value={input.from_name}
             />
           </div>
 
@@ -84,11 +84,11 @@ function ContactForm() {
               type="email"
               maxLength="100"
               required={true}
-              value={input.email}
-              onChange={(e) => setInput({ ...input, email: e.target.value })}
+              value={input.form_email}
+              onChange={(e) => setInput({ ...input, form_email: e.target.value })}
               onBlur={() => {
                 checkRequired();
-                setError({ ...error, email: !isValidEmail(input.email) });
+                setError({ ...error, email: !isValidEmail(input.form_email) });
               }}
             />
             {error.email &&
