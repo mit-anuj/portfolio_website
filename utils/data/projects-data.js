@@ -16,12 +16,12 @@ export const projectsData = [
     },
     {
         id: 2,
-        name: 'Attendo',
-        description: 'This innovative project revolutionizes attendance tracking through a QR code-based system. Teachers display their QR code, which students scan to mark attendance seamlessly while seated. The platform supports four user roles: staff, students, employees, and administration, with the admin module encompassing comprehensive management capabilities. This approach not only simplifies attendance recording but also enhances accuracy and efficiency, catering to the diverse needs of educational institutions. It’s a step towards modernizing academic administrative tasks, leveraging technology for streamlined operations.',
+        name: 'Leetcode Clone',
+        description: 'I developed a LeetCode-inspired coding platform that allows users to practice problems in multiple programming languages, including JavaScript and Python. The platform features integrated YouTube solutions for each problem, providing in-depth explanations and tutorials. Users can interact with problems by liking them and adding them to their favorites, offering a personalized experience for tracking progress. This project demonstrates my full-stack development skills and passion for creating user-friendly tools that enhance learning and productivity.',
         tools: ['HTML','CSS', 'Javascript','Php' ],
-        role: 'Front End Developer',
-        code: 'https://github.com/madm234/updated--Qr-code-Attendance-2022',
-        demo: 'https://aeis.dituniversity.edu.in/qrcode/yogi/index',
+        role: 'Full Stack Developer',
+        code: 'https://github.com/mit-anuj/leetcode-clone',
+        demo: 'https://leetcode-clone-rouge.vercel.app/',
         image: travel,
     },
     {
